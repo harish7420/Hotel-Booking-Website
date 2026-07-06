@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>AtithiHub | Hotel Search</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Playfair+Display:wght@600;700;800&display=swap" rel="stylesheet" />
+</head>
+<body>
+
+  <!-- ===== Header ===== -->
+  <header class="site-header">
+    <div class="container header-inner">
+      <div class="logo">
+        <span class="logo-icon"><i class="fa-solid fa-people-roof"></i></span>
+        <span class="logo-text">AtithiHub</span>
+      </div>
+      <p class="tagline">Book with Confidence, Stay with Comfort.</p>
+    </div>
+  </header>
+
+  <!-- ===== Hero / Search Bar ===== -->
+  <section class="hero">
+    <div class="container">
+      <h1>Search Hotels</h1>
+      <p class="hero-sub">Browse hundreds of hotels and filter by location, price, and rating.</p>
+
+      <div class="search-bar">
+        <input
+          type="text"
+          id="searchInput"
+          placeholder="Search by hotel name or city..."
+          autocomplete="off"
+        />
+        <button id="searchBtn">Search</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== Main Content ===== -->
+  <main class="container main-layout">
+
+    <!-- Filters Sidebar -->
+    <aside class="filters" id="filters">
+      <h2>Filters</h2>
+
+      <div class="filter-group">
+        <label for="locationFilter">Location</label>
+        <select id="locationFilter">
+          <option value="">All Locations</option>
+        </select>
+      </div>
+
+      <div class="filter-group">
+        <label>Price Range (₹)</label>
+        <div class="range-inputs">
+          <input type="number" id="minPrice" placeholder="Min" min="0" />
+          <span>-</span>
+          <input type="number" id="maxPrice" placeholder="Max" min="0" />
+        </div>
+      </div>
+
+      <div class="filter-group">
+        <label for="ratingFilter">Minimum Rating</label>
+        <select id="ratingFilter">
+          <option value="0">Any Rating</option>
+          <option value="4.5">4.5 & up</option>
+          <option value="4">4.0 & up</option>
+          <option value="3">3.0 & up</option>
+          <option value="2">2.0 & up</option>
+        </select>
+      </div>
+
+      <div class="filter-group">
+        <label for="sortBy">Sort By</label>
+        <select id="sortBy">
+          <option value="default">Default</option>
+          <option value="price-asc">Price: Low to High</option>
+          <option value="price-desc">Price: High to Low</option>
+          <option value="rating-desc">Rating: High to Low</option>
+          <option value="name-asc">Name: A to Z</option>
+        </select>
+      </div>
+
+      <button id="clearFilters" class="clear-btn">Clear All Filters</button>
+    </aside>
+
+    <!-- Results -->
+    <section class="results">
+      <div class="results-header">
+        <p id="resultsCount">Loading hotels...</p>
+      </div>
+
+      <div id="hotelGrid" class="hotel-grid"></div>
+
+      <div id="loadMoreWrap" class="load-more-wrap">
+        <button id="loadMoreBtn" class="load-more-btn">Load More Hotels</button>
+      </div>
+
+      <p id="noResults" class="no-results hidden">No hotels match your filters. Try adjusting your search.</p>
+    </section>
+  </main>
+
+  <!-- ===== Hotel Detail Modal ===== -->
+  <div id="hotelModal" class="modal hidden">
+    <div class="modal-overlay" id="modalOverlay"></div>
+    <div class="modal-content">
+      <button class="modal-close" id="modalClose">&times;</button>
+      <div id="modalBody"></div>
+    </div>
+  </div>
+
+  <!-- ===== Loading Overlay ===== -->
+  <div id="loadingOverlay" class="loading-overlay">
+    <div class="spinner"></div>
+    <p>Fetching hotels...</p>
+  </div>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>&copy; 2026 AtithiHub. Your trusted booking partner.</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
