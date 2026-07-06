@@ -1,4 +1,4 @@
-# AtithiHub — Hotel Search App
+# AtithiHub — Hotel Search Website
 
 A responsive, interactive hotel search web app built with **plain HTML, CSS, and JavaScript**, powered by the [Hotel Search API](https://demohotelsapi.pythonanywhere.com/).
 
