@@ -1,4 +1,4 @@
-# StayFinder — Hotel Search App
+# AtithiHub — Hotel Search App
 
 A responsive, interactive hotel search web app built with **plain HTML, CSS, and JavaScript**, powered by the [Hotel Search API](https://demohotelsapi.pythonanywhere.com/).
 
@@ -47,7 +47,3 @@ No build tools or dependencies required.
 - CSS3 (Grid, Flexbox, responsive media queries)
 - Vanilla JavaScript (Fetch API, DOM manipulation, event delegation)
 - Google Fonts: Playfair Display + Poppins
-
-## Author
-
-Built as a college frontend module final project.
